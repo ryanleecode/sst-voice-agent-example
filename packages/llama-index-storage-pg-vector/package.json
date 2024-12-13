@@ -1,0 +1,55 @@
+{
+  "name": "@voice-agent-example/llama-index_storage-pg-vector",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "@voice-agent-example/source": "./src/mod.ts",
+        "types": "./dist/esm/mod.d.ts",
+        "default": "./dist/esm/mod.js"
+      }
+    }
+  },
+  "module": "./dist/esm/mod.js",
+  "files": [
+    "dist"
+  ],
+  "tshy": {
+    "dialects": [
+      "esm"
+    ],
+    "project": "./tsconfig.build.json",
+    "exports": {
+      "./package.json": "./package.json",
+      ".": "./src/mod.ts"
+    },
+    "sourceDialects": [
+      "@voice-agent-example/source"
+    ]
+  },
+  "scripts": {
+    "prepare": "pnpm turbo build",
+    "clean": "rimraf dist .tshy .tshy-build",
+    "build": "pnpm run clean && tshy"
+  },
+  "dependencies": {
+    "kysely": "^0.27.4",
+    "pgvector": "^0.2.0"
+  },
+  "devDependencies": {
+    "@voice-agent-example/llama-index_storage": "workspace:^",
+    "@types/pg": "^8.11.10",
+    "effect": "^3.11.6",
+    "llamaindex": "^0.6.16",
+    "pg": "^8.13.0"
+  },
+  "peerDependencies": {
+    "@voice-agent-example/llama-index_storage": "workspace:^",
+    "effect": "^3.11.6",
+    "llamaindex": "^0.6.16",
+    "pg": "^8.13.0"
+  }
+}

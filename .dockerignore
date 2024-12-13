@@ -1,0 +1,77 @@
+# Version control
+.git
+.gitignore
+
+# Node.js
+node_modules
+npm-debug.log
+yarn-error.log
+.pnpm-store
+
+# Build outputs
+.sst
+out
+.turbo
+.open-next
+dist
+build
+
+# Environment and config files
+.env*
+*.env
+*.config.js
+*.config.ts
+sst.config.ts
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.vscode
+.idea
+*.swp
+*.swo
+
+# Testing
+coverage
+.nyc_output
+
+# Temporary files
+tmp
+temp
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Project specific
+infra
+docker
+README.md
+
+# Ignore sst-env.d.ts under packages directory
+packages/**/sst-env.d.ts
+scripts
+packages/**/temp
+
+packages/**/tsdoc-metadata.json
+
+**/node_modules
+out
+.turbo
+**/.turbo
+dist
+**/.dist
+**/.dev-dist
+**/dist
+**/dev-dist

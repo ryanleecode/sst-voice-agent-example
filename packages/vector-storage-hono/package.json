@@ -1,0 +1,52 @@
+{
+  "name": "@voice-agent-example/vector-storage-hono",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "@voice-agent-example/source": "./src/mod.ts",
+        "types": "./dist/esm/mod.d.ts",
+        "default": "./dist/esm/mod.js"
+      }
+    }
+  },
+  "module": "./dist/esm/mod.js",
+  "files": [
+    "dist"
+  ],
+  "tshy": {
+    "dialects": [
+      "esm"
+    ],
+    "project": "./tsconfig.build.json",
+    "exports": {
+      "./package.json": "./package.json",
+      ".": "./src/mod.ts"
+    },
+    "sourceDialects": [
+      "@voice-agent-example/source"
+    ]
+  },
+  "scripts": {
+    "prepare": "pnpm turbo build",
+    "clean": "rimraf dist .tshy .tshy-build",
+    "build": "pnpm run clean && tshy"
+  },
+  "dependencies": {
+    "@hono/effect-validator": "^1.0.1",
+    "hono": "^4.6.2"
+  },
+  "devDependencies": {
+    "@voice-agent-example/llama-index_storage": "workspace:^",
+    "effect": "^3.11.6",
+    "llamaindex": "^0.6.16"
+  },
+  "peerDependencies": {
+    "@voice-agent-example/llama-index_storage": "workspace:^",
+    "llamaindex": "^0.6.16",
+    "effect": "^3.11.6"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "extends": "@total-typescript/tsconfig/tsc/no-dom/app",
+  "compilerOptions": {
+    "moduleResolution": "NodeNext",
+    "composite": true,
+    "declarationMap": false,
+    "paths": {
+      "@voice-agent-example/pybridge/*": ["../../packages/pybridge/src/*"],
+      "@voice-agent-example/pybridge": ["../../packages/pybridge/src/index"]
+    },
+    "customConditions": ["@voice-agent-example/source"],
+    "incremental": true
+  },
+  "reflection": true,
+  "include": ["*.ts"],
+  "exclude": ["node_modules"]
+}

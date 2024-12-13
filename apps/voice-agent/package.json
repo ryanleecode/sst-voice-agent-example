@@ -1,0 +1,34 @@
+{
+  "name": "@voice-agent-example/voice-agent",
+  "private": true,
+  "type": "module",
+  "module": "main.ts",
+  "scripts": {
+    "build": "pnpm typecheck",
+    "typecheck": "tsc --noEmit",
+    "dev": "bun run main.ts",
+    "start": "NODE_ENV=production bun run main.ts",
+    "install": "deepkit-type-install"
+  },
+  "dependencies": {
+    "@deepkit/bun": "1.0.1-alpha.153",
+    "@deepkit/core": "1.0.1-alpha.147",
+    "@deepkit/type": "1.0.1-alpha.153",
+    "@effect/platform": "^0.71.0",
+    "@effect/platform-bun": "^0.51.0",
+    "@voice-agent-example/llama-index_storage": "workspace:^",
+    "@voice-agent-example/llama-index_storage-pg-vector": "workspace:^",
+    "@voice-agent-example/vector-storage-hono": "workspace:^",
+    "@voice-agent-example/pybridge": "workspace:^",
+    "effect": "^3.11.6",
+    "hono": "^4.6.13",
+    "llamaindex": "^0.6.16",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@deepkit/type-compiler": "1.0.1-alpha.150",
+    "@types/bun": "^1.1.14",
+    "@types/pg": "^8.11.10",
+    "typescript": "^5.7.2"
+  }
+}
